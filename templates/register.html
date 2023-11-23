@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="regdata" method="post">
+        {% csrf_token %}
+        <h1>SIGN UP</h1>
+        <table>
+            <tr>
+                <td>User Name/ Email :</td>
+                <td><input type="email" name="user"></td>
+            </tr>
+            <tr>
+                <td>Create Password :</td>
+                <td><input type="password" name="epass"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password :</td>
+                <td><input type="password" name="cpass"></td>
+            </tr>
+            </table>
+        <input type="submit" name="subbtn">
+    </form>
+    <p>Already have an account?</p><a href="{% url 'log' %}">LOGIN</a>
+</body>
+</html>

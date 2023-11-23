@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container mt-4">
+    <h2>My To Do Tasks 📝</h2>
+    <ul class="list-group">
+        {% for task in tasks %}
+            <li class="list-group-item {% if task.completed %}list-group-item-success{% endif %}"> &nbsp;
+                {{ task.title }}
+                <a href="{% url 'edit_task' task.pk %}" class="btn btn-warning btn-sm float-right">✏️Edit</a> &nbsp;
+                <a href="{% url 'delete_task' task.pk %}" class="btn btn-danger btn-sm float-right mr-2">❌Delete</a> &nbsp;
+                {% if not task.completed %}
+                    <a href="{% url 'tasklist' %}?task_id={{ task.pk }}" class="btn btn-success btn-sm float-right mr-2">Mark as Done</a>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_task' %}" class="btn btn-primary mt-2">Add Task</a>
+</div>
+</body>
+</html>
