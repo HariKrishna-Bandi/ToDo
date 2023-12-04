@@ -1,0 +1,48 @@
+.header {
+    height: 90px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    background: linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 100%);
+}
+
+body {
+    background: #e7f2f2;
+    font-family: courier, monospace;
+    font-weight: 900;
+    font-size: 16px;
+    text-align: center;
+}
+
+.title {
+    font-size: 50px;
+}
+
+.subbtn {
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    background-color: black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.save {
+    color: white;
+    font-family: courier, monospace;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 5px;
+    word-wrap: break-word;
+}
+
+.form {
+    font-weight: 900;
+    font-size: 20px;
+    text-align: left;
+}
+
+.form textbox {
+    border-radius: 10px
+}

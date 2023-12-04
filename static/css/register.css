@@ -1,0 +1,108 @@
+body {
+    background : linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 100%);
+}
+
+.container {
+    position: absolute;
+    left: 500px;
+    top: 100px;
+    background-color : #e7f2f2;
+    border-radius: 10px;
+    border-width: 5px;
+    width: 450px;
+    height: 405px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sgntxt {
+    left: 150px;
+    top: 10px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-family: courier, monospace;
+    font-weight: 1000;
+    font-size: 35px;
+    word-wrap: break-word;
+}
+
+.table {
+    position: absolute;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    top: 85px;
+    left: 15px;
+    font-family: courier, monospace;
+    font-weight: 600;
+    font-size: 20px;
+    word-wrap: break-word;
+}
+
+.warn {
+    position: absolute;
+    left: 130px;
+    top: 75px;
+    font-family: courier, monospace;
+    font-weight: 900;
+    font-size: 16px;
+    color: red;
+    word-wrap: break-word;
+}
+
+.txtbox{
+    border-radius: 10px;
+    width: 150px;
+    height: 20px;
+    font-family: courier, monospace;
+    font-weight: 600;
+    font-size: 15px;
+    word-wrap: break-word;
+}
+
+.button {
+    width: 150px;
+    height: 40px;
+    position: absolute;
+    left: 160px;
+    top: 320px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    background-color: black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.logbtn {
+    text-align: center;
+    color: white;
+    font-family: courier, monospace;
+    font-weight: 1000;
+    font-size: 20px;
+    line-height: 5px;
+    word-wrap: break-word;
+}
+
+.sgup {
+    font-family: courier, monospace;
+    font-weight: 1000;
+    font-size: 20px;
+    word-wrap: break-word;
+    position: absolute;
+    top: 370px;
+    left: 80px;
+}
+
+.sgup a {
+    text-decoration: none;
+    color: red;
+}

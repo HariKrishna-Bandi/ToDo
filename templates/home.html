@@ -1,25 +1,46 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{ request.user|title }} Tasks</title>
+    <link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="container mt-4">
-    <h2>My To Do Tasks 📝</h2>
+<div class="header">
+    <div class="title">Hello {{ request.user|title }} 😊</div>
+    <div class="count">You have <i>{{ count }}</i> incomplete task{{ count|pluralize:"s" }}</div>
+    <form action="logout" method="post">
+        {% csrf_token %}
+        <button class="lgoutbtn" type="submit">
+            <div class="logout">LOGOUT</div>
+        </button>
+    </form>
+</div>
+<div class="container">
+    <div class="title2">My To Do Tasks 📝</div>
+    <form action="add" method="post">
+        {% csrf_token %}
+        <button class="addbtn" type="submit">
+            <div class="addtask">➕ Add Task</div>
+        </button>
+    </form>
     <ul class="list-group">
         {% for task in tasks %}
-            <li class="list-group-item {% if task.completed %}list-group-item-success{% endif %}"> &nbsp;
-                {{ task.title }}
-                <a href="{% url 'edit_task' task.pk %}" class="btn btn-warning btn-sm float-right">✏️Edit</a> &nbsp;
-                <a href="{% url 'delete_task' task.pk %}" class="btn btn-danger btn-sm float-right mr-2">❌Delete</a> &nbsp;
+        &nbsp;
+            <li class="list-group-item {% if task.completed %}list-group-item-success{% endif %}">
+                <div class="items">
+                    <div class="tasktitle">{{ task.title }}</div>
+                    <a href="{% url 'edit_task' task.pk %}" class="btn btn-warning btn-sm float-right">✏️</a>
+                    <a href="{% url 'delete_task' task.pk %}" class="btn btn-danger btn-sm float-right mr-2">❌</a>
+                </div>
                 {% if not task.completed %}
-                    <a href="{% url 'tasklist' %}?task_id={{ task.pk }}" class="btn btn-success btn-sm float-right mr-2">Mark as Done</a>
+
                 {% endif %}
             </li>
         {% endfor %}
     </ul>
-    <a href="{% url 'add_task' %}" class="btn btn-primary mt-2">Add Task</a>
 </div>
 </body>
 </html>

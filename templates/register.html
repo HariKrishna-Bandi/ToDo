@@ -1,29 +1,50 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="{% static 'css/register.css' %}" rel="stylesheet">
 </head>
 <body>
+<div class="container">
+    <div class="sgntxt">SIGN UP</div>
     <form action="regdata" method="post">
         {% csrf_token %}
-        <h1>SIGN UP</h1>
-        <table>
+        <div class="warn">{{ data }}</div>
+        <table class="table">
             <tr>
-                <td>User Name/ Email :</td>
-                <td><input type="email" name="user"></td>
+                <td>User Name</td>
+                <td>: &nbsp<input type="text" name="user" class="txtbox"></td>
             </tr>
             <tr>
-                <td>Create Password :</td>
-                <td><input type="password" name="epass"></td>
+                <td>&nbsp;</td>
             </tr>
             <tr>
-                <td>Confirm Password :</td>
-                <td><input type="password" name="cpass"></td>
+                <td>Email</td>
+                <td>: &nbsp<input type="email" name="mail" class="txtbox"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Create Password</td>
+                <td>: &nbsp<input type="password" name="epass" class="txtbox"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Confirm Password</td>
+                <td>: &nbsp<input type="password" name="cpass" class="txtbox"></td>
             </tr>
             </table>
-        <input type="submit" name="subbtn">
+        <button class="button">
+            <div class="logbtn">SIGNUP</div>
+        </button>
     </form>
-    <p>Already have an account?</p><a href="{% url 'log' %}">LOGIN</a>
+    <div class="sgup">Already have an account? <a href="{% url 'log' %}">Login</a> </div>
+</div>
 </body>
 </html>

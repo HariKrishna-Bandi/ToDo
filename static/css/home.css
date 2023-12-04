@@ -1,0 +1,94 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    background: linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 100%);
+}
+
+.title {
+    font-family: courier new, monospace;
+    font-weight: bold;
+    font-size: 30px;
+    word-wrap: break-word;
+    text-shadow: 3px 3px 3px #ababab;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: black;
+}
+
+.count {
+    font-family: courier new, monospace;
+    font-weight: 900;
+    font-size: 20px;
+    word-wrap: break-word;
+    position: absolute;
+    top: 70px;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: black;
+}
+
+
+
+.lgoutbtn, .addbtn {
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    background-color: black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.addbtn {
+    position: absolute;
+    left: 20px;
+
+}
+
+.logout, .addtask {
+    text-align: center;
+    color: white;
+    font-family: courier, monospace;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 5px;
+    word-wrap: break-word;
+}
+
+.container {
+    background: #e7f2f2;
+    height: 100vh;
+}
+
+.title2 {
+    font-family: courier, monospace;
+    font-weight: 900;
+    font-size: 25px;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.list-group{
+    font-family: courier, monospace;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 25px;
+    word-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    width: 300px
+}
+
+.tasktitle {
+    font-size: 26px;
+    width: 350px;
+}

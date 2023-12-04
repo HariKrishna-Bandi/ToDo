@@ -1,16 +1,23 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{ request.user|title }} Add Tasks</title>
+    <link href="{% static 'css/addtask.css' %}" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div class="container mt-4">
-        <h2>Add Task</h2>
-        <form method="post">
+    <div class="header">
+        <div class="title">Add Task</div>
+    </div>
+    <div class="container">
+        <form method="post" class="form">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit" class="btn btn-primary">Save Task</button>
+            <button type="submit" class="subbtn">
+                <div class="save">Save Task</div>
+            </button>
         </form>
     </div>
 </body>
